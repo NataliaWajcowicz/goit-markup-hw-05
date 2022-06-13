@@ -66,25 +66,30 @@ button{
     letter-spacing:0.02em;
     display:flex;
     align-items:center;
-    padding-top:24px;
-    padding-bottom:24px;
     justify-content:flex-start;
 }
 
 nav{
     margin-right:345px;
+    padding-top:32px;
 }
+
 .menu{
     display:flex;
     max-width:254px;
-    align-items:center;
     margin-left:0px;
+    padding-top:0px;
+    height:48px;
+    padding-bottom:0px;
 }
 
 .menu-link{
     margin-left:0px;
     padding-right:46px;
+    display:inline-block;
 }
+
+
 
 .menu:not(:last-child){
     margin-right:46px;
@@ -103,6 +108,22 @@ nav{
 }
 
 
+.active{
+    position:relative;
+    top:0px;
+    left:0px;
+    display:flex;
+}
+
+.active::after{
+    content:"";
+    width:51px;
+    position:absolute;
+    border-top:4px solid var(--brand-color);
+    border-radius:2px;
+    top:45px;
+}
+
 .logo{
     font-family:'Raleway';
     font-weight: 700;
@@ -115,6 +136,8 @@ nav{
     padding-right:0px;
     margin-right:93px;
     flex-basis:145px;
+    padding-top:24px;
+    padding-bottom:24px;
 }
 
 .logo-accent{
