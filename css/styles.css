@@ -66,11 +66,10 @@ button{
     letter-spacing:0.02em;
     display:flex;
     align-items:center;
-    justify-content:flex-start;
+    justify-content:center;
 }
 
 nav{
-    margin-right:345px;
     padding-top:32px;
 }
 
@@ -83,30 +82,18 @@ nav{
     padding-bottom:0px;
 }
 
-.menu-link{
-    margin-left:0px;
-    padding-right:46px;
-    display:inline-block;
+.menu-item {
+    padding-right: 46px;
 }
 
-
-
-.menu:not(:last-child){
-    margin-right:46px;
-}
-.menu:first-child{
-    padding-left:0px;
+.menu-item:last-of-type {
+    padding-right: 0px;
 }
 
-.menu:last-child{
-    padding-right:0px;
-    margin-right:0px;
+.menu-link {
+    padding: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.menu-link{
-    flex-basis:51px;
-}
-
 
 .active{
     position:relative;
@@ -138,16 +125,30 @@ nav{
     flex-basis:145px;
     padding-top:24px;
     padding-bottom:24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-accent{
     color: var(--brand-color);
 }
 
-.contact-tel
-.contact-mail{
+.contact-link{
     color:#757575;
+    display: flex;
+    flex-wrap: nowrap;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-item {
+    padding-right: 30px;
+}
+
+.contact-item:last-of-type {
+    padding-right: 0px;
+}
+
+.contact-icon {
+    margin-right: 10px;
 }
 
 .contact{
@@ -157,30 +158,16 @@ nav{
     padding-right:0px;
     padding-left:0px;
     align-items:center;
-    justify-content:flex-end;
+    justify-content:center;
+    margin-left:345px;
 }
 
-.contact-item{
-    display:flex;
-    flex-wrap:nowrap;
-}
-
-.contact-item:hover,
-.contact-item:focus{
+.contact-link:hover,
+.contact-link:focus{
     fill: var(--brand-color);
-    color: var(--brand-color);
 }
 
-.contact-mail{
-    padding-right:30px;
-    flex-basis:110px;
-    padding-left:10px;
-}
-
-.contact-tel{
-    padding-left:10px;
-}
-.header{
+.banner{
     background-color: var(--dark-background-color);
     display:flex;
     flex-direction:column;
@@ -209,12 +196,9 @@ nav{
     max-width:696px;
     margin:0;
     padding-bottom:30px;
-
-
-
 }
 
-.header-button{
+.banner-button{
     background-color:var(--brand-color);
     color: var(--light-color);
     font-weight:700;
@@ -278,6 +262,8 @@ nav{
     font-weight:700;
     line-height:1.14em;
     text-transform:uppercase; 
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .feature-description{
@@ -397,7 +383,7 @@ nav{
     padding-bottom:30px;
 }
 
-.team-social-item{
+.team-social-link{
     display:flex;
     width: 44px;
     height: 44px;
@@ -408,18 +394,19 @@ nav{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-social-item svg{
+.team-social-icon{
     fill:#757575;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
-.team-social-item:hover,
-.team-social-item:focus{
+.team-social-link:hover,
+.team-social-link:focus{
     background-color: var(--brand-color);
+    fill: var(--light-color);
 }
-.team-social-item:hover svg,
-.team-social-item:focus svg{
+.team-social-link:hover svg,
+.team-social-link:focus svg{
     fill: var(--light-color);
 }
 
@@ -489,6 +476,7 @@ footer{
     padding-top:60px;
     padding-bottom:20px;
     display:flex;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address{
@@ -537,7 +525,7 @@ footer{
     
 }
 
-.footer-social-item{
+.footer-social-link{
     display:flex;
     background-color:rgba(255, 255, 255, 0.1);
     width:44px;
@@ -554,8 +542,8 @@ footer{
     
 }
 
-.footer-social-item:hover,
-.footer-social-item:focus{
+.footer-social-link:hover,
+.footer-social-link:focus{
     background-color:var(--brand-color);
 }
 
